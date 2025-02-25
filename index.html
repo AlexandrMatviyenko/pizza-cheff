@@ -45,10 +45,10 @@
             </div>
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a href="#choose" class="menu__link">Пиццы</a>
+                    <a href="#products__title" class="menu__link">Пиццы</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#choose" class="menu__link">Напитки</a>
+                    <a href="#products__title" class="menu__link">Напитки</a>
                 </li>
                 <li class="menu__item">
                     <a href="#delivery" class="menu__link">Доставка и оплата</a>
@@ -132,7 +132,7 @@
 
     <section class="products">
         <div class="container">
-            <h2 class="products__title" id="choose">Выберите свою любимую пиццу</h2>
+            <h2 class="products__title" id="products__title">Выберите свою любимую пиццу</h2>
             <div class="products__items">
                 <div class="product">
                     <div class="product__image">
@@ -167,7 +167,7 @@
                         Бекон, сыр, сосиски, ананас, томатная паста
                     </div>
                     <div class="product__action">
-                        <button class="btn product__btn">В корзину</button>
+                        <button class="btn product__btn" id="no-touch">В корзину</button>
                     </div>
                 </div>
                 <div class="product">
@@ -188,7 +188,7 @@
                     </div>
                     <div class="product__title">Барбекю Премиум</div>
                     <div class="product__text">
-                            Свинина BBQ, соус Барбекю, сыр, курица, соус для пиццы, соус чили
+                        Свинина BBQ, соус Барбекю, сыр, курица, соус для пиццы, соус чили
                     </div>
                     <div class="product__action">
                         <button class="btn product__btn">В корзину</button>
@@ -247,8 +247,8 @@
                 </div>
             </div>
             <div class="order__form" id="contact-form">
-                <input class="base-input order__base-input" type="text" placeholder="Ваше имя">
-                <input class="base-input order__base-input" type="text" placeholder="Адрес доставки">
+                <input class="base-input order__base-input" id="name-input" type="text" placeholder="Ваше имя">
+                <input class="base-input order__base-input" name="address" type="text" placeholder="Адрес доставки">
                 <input class="base-input order__base-input" type="tel" placeholder="Телефон">
                 <button class="btn order__btn">Оформить заказ</button>
             </div>
@@ -266,23 +266,10 @@
                 <img src="icons/icon-pizza-cheff-logo.png" alt="Logo">
             </a>
         </div>
-        <div class="footer_rights">Все права защищены, 2020</div>
+        <div class="footer_rights">Все права защищены, <span>2020</span></div>
     </div>
 </footer>
 
-<script>
-    document.getElementById('burger').onclick = function () {
-        document.getElementById('menu').classList.add('open');
-    }
-
-    document.querySelectorAll('#menu *').forEach((item) => {
-        item.onclick = () => {
-            document.getElementById('menu').classList.remove('open');
-        }
-    })
-</script>
-
-
-
+<script src="scripts/script.js"></script>
 </body>
 </html>
